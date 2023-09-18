@@ -91,10 +91,13 @@ class Grid:
 	def printData(self):
 		self.counter += 1
 		self.counter %= 12
+		clear = 'cls'
+		if os.name == "posix":
+			clear = "clear"
 		if self.counter == 0:
-			os.system("clear")
-			for i in range(self.rows):
-				for j in range(self.columns):
+			os.system(clear)
+			for i in range(self.filas):
+				for j in range(self.columnas):
 					print(self.matrix[i][j], " ", end = "")
 				print()
 			print("\n")
