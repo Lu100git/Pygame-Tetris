@@ -60,7 +60,7 @@ class Grid:
 			self.matrix[current_row][i] = 0
 
 	# after the row gets cleaerd we need to bring down the rows on top
-	def moveRowDown(self, current_row, cleared_rows):
+	def moveRowDown(self, current_row):
 		for i in range(self.columns):
 			if current_row == 0:
 				break
@@ -82,7 +82,7 @@ class Grid:
 
 			# acording to how many full rows we cleared, this is how many rows we'll move the rows on top
 			if full_rows > 0:
-				self.moveRowDown(last_row, full_rows)
+				self.moveRowDown(last_row)
 
 		# after clearing and moving the rows, we reset the counter to 0
 		full_rows = 0
