@@ -96,8 +96,8 @@ class Grid:
 			clear = "clear"
 		if self.counter == 0:
 			os.system(clear)
-			for i in range(self.filas):
-				for j in range(self.columnas):
+			for i in range(self.rows):
+				for j in range(self.columns):
 					print(self.matrix[i][j], " ", end = "")
 				print()
 			print("\n")
